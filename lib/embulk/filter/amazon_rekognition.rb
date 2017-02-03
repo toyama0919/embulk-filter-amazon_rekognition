@@ -1,4 +1,5 @@
 require 'aws-sdk-rekognition'
+require 'addressable/uri'
 
 module Embulk
   module Filter
@@ -82,7 +83,8 @@ module Embulk
               }
             }
         elsif image_path =~ /https?\:\/\//
-          return { bytes: Net::HTTP.get_response(URI.parse(image_path)).body }
+          response = Net::HTTP.get_response(Addressable::URI.parse(image_path))
+          return { bytes: response.body }
         else
           return { bytes: File.read(image_path) }
         end
