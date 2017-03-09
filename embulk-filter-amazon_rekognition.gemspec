@@ -1,7 +1,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "embulk-filter-amazon_rekognition"
-  spec.version       = "0.1.1"
+  spec.version       = "0.1.2"
   spec.authors       = ["toyama0919"]
   spec.summary       = "Amazon Rekognition filter plugin for Embulk"
   spec.description   = "Amazon Rekognition"
