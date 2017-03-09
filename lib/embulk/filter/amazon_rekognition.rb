@@ -1,4 +1,4 @@
-require 'aws-sdk-rekognition'
+require 'aws-sdk'
 require 'addressable/uri'
 
 module Embulk
